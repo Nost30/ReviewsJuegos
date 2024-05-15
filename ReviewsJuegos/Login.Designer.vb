@@ -31,14 +31,14 @@ Partial Class Login
         '
         'TxtUsuario
         '
-        Me.TxtUsuario.Location = New System.Drawing.Point(268, 103)
+        Me.TxtUsuario.Location = New System.Drawing.Point(121, 74)
         Me.TxtUsuario.Name = "TxtUsuario"
         Me.TxtUsuario.Size = New System.Drawing.Size(100, 23)
         Me.TxtUsuario.TabIndex = 1
         '
         'TxtContra
         '
-        Me.TxtContra.Location = New System.Drawing.Point(268, 172)
+        Me.TxtContra.Location = New System.Drawing.Point(121, 143)
         Me.TxtContra.Name = "TxtContra"
         Me.TxtContra.Size = New System.Drawing.Size(100, 23)
         Me.TxtContra.TabIndex = 2
@@ -46,7 +46,7 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(271, 85)
+        Me.Label2.Location = New System.Drawing.Point(124, 56)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 15)
         Me.Label2.TabIndex = 4
@@ -55,7 +55,7 @@ Partial Class Login
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(270, 145)
+        Me.Label3.Location = New System.Drawing.Point(123, 116)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(67, 15)
         Me.Label3.TabIndex = 5
@@ -63,7 +63,7 @@ Partial Class Login
         '
         'BtnLogin
         '
-        Me.BtnLogin.Location = New System.Drawing.Point(271, 230)
+        Me.BtnLogin.Location = New System.Drawing.Point(124, 206)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.Size = New System.Drawing.Size(75, 23)
         Me.BtnLogin.TabIndex = 6
@@ -74,7 +74,7 @@ Partial Class Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(425, 306)
+        Me.ClientSize = New System.Drawing.Size(317, 306)
         Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)

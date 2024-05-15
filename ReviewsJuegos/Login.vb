@@ -8,12 +8,13 @@
         ' Esto podría involucrar la comparación con una base de datos, un archivo de texto, etc.
         ' Aquí tienes un ejemplo muy básico:
 
-        If username = "admin" AndAlso password = "4E7AFEBCFBAE000B22C7C85E5560F89A2A0280B4" Then
+        If username = "admin" AndAlso password = "12345" Then
             MessageBox.Show("Inicio de sesión exitoso")
 
             Dim ReviewsJuegos As New Form1()
             ReviewsJuegos.Show()
-            Me.Close() ' Cierra el formulario de inicio de sesión
+
+            Me.Hide() ' Cierra el formulario de inicio de sesión
 
         Else
 

@@ -12,9 +12,9 @@ Public Class Form1
         DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
 
 
-        query = "SELECT Id,NombreJuego FROM Juego"
+        query = "SELECT id,Genero FROM Genero"
         ComboBoxJuego.DataSource = ConexionSQL.SelectQuery(query)
-        ComboBoxJuego.DisplayMember = "NombreJuego"
+        ComboBoxJuego.DisplayMember = "Genero"
         ComboBoxJuego.ValueMember = "id"
         auto = False
         DataGridView1.ReadOnly = True
@@ -35,7 +35,7 @@ Public Class Form1
             Return
         End If
         query = "SELECT * FROM VW_JuegoReview
-where nombrejuego='" & ComboBoxJuego.Text & "'"
+where Genero='" & ComboBoxJuego.Text & "'"
         DataGridView1.DataSource = ConexionSQL.SelectQuery(query)
     End Sub
 
@@ -112,5 +112,13 @@ WHERE nombrejuego LIKE '%" & buscarTexto & "%'"
 
     Private Sub BtnRefrescar_Click(sender As Object, e As EventArgs) Handles BtnRefrescar.Click
         Me.Refresh()
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Formulario.Show()
     End Sub
 End Class

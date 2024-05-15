@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
     <StartupObject>ReviewsJuegos.My.MyApplication</StartupObject>
-    <UseWindowsForms>true</UseWindowsForms>
+    <UseWindowsForms>True</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
 

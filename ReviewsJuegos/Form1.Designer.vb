@@ -36,6 +36,7 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.BtnRefrescar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -153,13 +154,23 @@ Partial Class Form1
         Me.BtnRefrescar.Text = "Refrescar"
         Me.BtnRefrescar.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(595, 165)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 44)
+        Me.Button1.TabIndex = 15
+        Me.Button1.Text = "Agregar genero"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AcceptButton = Me.BtnBuscar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
-        Me.ClientSize = New System.Drawing.Size(586, 516)
+        Me.ClientSize = New System.Drawing.Size(703, 516)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.BtnRefrescar)
         Me.Controls.Add(Me.BtnActualizar)
         Me.Controls.Add(Me.Label3)
@@ -195,4 +206,5 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents BtnActualizar As Button
     Friend WithEvents BtnRefrescar As Button
+    Friend WithEvents Button1 As Button
 End Class
