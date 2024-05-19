@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AgregarGenero
+Partial Class AgregarDesarrolladora
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -23,63 +23,63 @@ Partial Class AgregarGenero
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TxtAgGenero = New System.Windows.Forms.TextBox()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.TxtAgDesarrolladora = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(93, 43)
+        Me.Label1.Location = New System.Drawing.Point(57, 72)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 15)
+        Me.Label1.Size = New System.Drawing.Size(185, 15)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Agregar genero"
+        Me.Label1.Text = "Agregar una nueva desarrolladora"
         '
-        'TxtAgGenero
+        'Button1
         '
-        Me.TxtAgGenero.Location = New System.Drawing.Point(107, 91)
-        Me.TxtAgGenero.Name = "TxtAgGenero"
-        Me.TxtAgGenero.Size = New System.Drawing.Size(75, 23)
-        Me.TxtAgGenero.TabIndex = 1
-        '
-        'BtnAgregar
-        '
-        Me.BtnAgregar.Location = New System.Drawing.Point(55, 152)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnAgregar.TabIndex = 2
-        Me.BtnAgregar.Text = "Aceptar"
-        Me.BtnAgregar.UseVisualStyleBackColor = True
+        Me.Button1.Location = New System.Drawing.Point(35, 170)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Agregar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(181, 152)
+        Me.Button2.Location = New System.Drawing.Point(167, 170)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 3
+        Me.Button2.TabIndex = 2
         Me.Button2.Text = "Cerrar"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'AgregarGenero
+        'TxtAgDesarrolladora
+        '
+        Me.TxtAgDesarrolladora.Location = New System.Drawing.Point(87, 116)
+        Me.TxtAgDesarrolladora.Name = "TxtAgDesarrolladora"
+        Me.TxtAgDesarrolladora.Size = New System.Drawing.Size(100, 23)
+        Me.TxtAgDesarrolladora.TabIndex = 3
+        '
+        'AgregarDesarrolladora
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(291, 213)
+        Me.ClientSize = New System.Drawing.Size(284, 266)
+        Me.Controls.Add(Me.TxtAgDesarrolladora)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.BtnAgregar)
-        Me.Controls.Add(Me.TxtAgGenero)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "AgregarGenero"
-        Me.Text = "AgregarGenero"
+        Me.Name = "AgregarDesarrolladora"
+        Me.Text = "AgregarDesarrolladora"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TxtAgGenero As TextBox
-    Friend WithEvents BtnAgregar As Button
+    Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents TxtAgDesarrolladora As TextBox
 End Class

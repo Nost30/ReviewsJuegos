@@ -37,6 +37,8 @@ Partial Class Form1
         Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.BtnRefrescar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnAgregarPlata = New System.Windows.Forms.Button()
+        Me.BtnAgDesarrolladora = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -163,6 +165,24 @@ Partial Class Form1
         Me.Button1.Text = "Agregar genero"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'BtnAgregarPlata
+        '
+        Me.BtnAgregarPlata.Location = New System.Drawing.Point(595, 215)
+        Me.BtnAgregarPlata.Name = "BtnAgregarPlata"
+        Me.BtnAgregarPlata.Size = New System.Drawing.Size(75, 40)
+        Me.BtnAgregarPlata.TabIndex = 16
+        Me.BtnAgregarPlata.Text = "Agregar plataforma"
+        Me.BtnAgregarPlata.UseVisualStyleBackColor = True
+        '
+        'BtnAgDesarrolladora
+        '
+        Me.BtnAgDesarrolladora.Location = New System.Drawing.Point(579, 261)
+        Me.BtnAgDesarrolladora.Name = "BtnAgDesarrolladora"
+        Me.BtnAgDesarrolladora.Size = New System.Drawing.Size(91, 60)
+        Me.BtnAgDesarrolladora.TabIndex = 17
+        Me.BtnAgDesarrolladora.Text = "Agregar Desarrolladora"
+        Me.BtnAgDesarrolladora.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AcceptButton = Me.BtnBuscar
@@ -170,6 +190,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
         Me.ClientSize = New System.Drawing.Size(703, 516)
+        Me.Controls.Add(Me.BtnAgDesarrolladora)
+        Me.Controls.Add(Me.BtnAgregarPlata)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.BtnRefrescar)
         Me.Controls.Add(Me.BtnActualizar)
@@ -207,4 +229,6 @@ Partial Class Form1
     Friend WithEvents BtnActualizar As Button
     Friend WithEvents BtnRefrescar As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents BtnAgregarPlata As Button
+    Friend WithEvents BtnAgDesarrolladora As Button
 End Class

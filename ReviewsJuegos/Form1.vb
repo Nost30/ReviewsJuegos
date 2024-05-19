@@ -111,7 +111,10 @@ WHERE nombrejuego LIKE '%" & buscarTexto & "%'"
     End Sub
 
     Private Sub BtnRefrescar_Click(sender As Object, e As EventArgs) Handles BtnRefrescar.Click
-        Me.Refresh()
+        query = "SELECT id,Genero FROM Genero"
+        ComboBoxJuego.DataSource = ConexionSQL.SelectQuery(query)
+        ComboBoxJuego.DisplayMember = "Genero"
+        ComboBoxJuego.ValueMember = "id"
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -119,6 +122,14 @@ WHERE nombrejuego LIKE '%" & buscarTexto & "%'"
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Formulario.Show()
+        AgregarGenero.Show()
+    End Sub
+
+    Private Sub BtnAgregarPlata_Click(sender As Object, e As EventArgs) Handles BtnAgregarPlata.Click
+        AgregarPlataforma.Show()
+    End Sub
+
+    Private Sub BtnAgDesarrolladora_Click(sender As Object, e As EventArgs) Handles BtnAgDesarrolladora.Click
+        AgregarDesarrolladora.Show()
     End Sub
 End Class
