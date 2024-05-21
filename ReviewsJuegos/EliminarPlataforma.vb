@@ -42,6 +42,7 @@ Public Class EliminarPlataforma
             Dim connectionString As String = "Data Source=localhost;Initial Catalog=ReviewJuego;Integrated Security=True"
             Dim query As String = "SP_EliminarPlataforma"
 
+
             Using connection As New SqlConnection(connectionString)
                 Dim command As New SqlCommand(query, connection)
                 command.CommandType = CommandType.StoredProcedure
