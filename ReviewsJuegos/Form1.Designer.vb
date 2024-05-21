@@ -42,6 +42,9 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -161,7 +164,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(595, 165)
+        Me.Button1.Location = New System.Drawing.Point(579, 167)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 44)
         Me.Button1.TabIndex = 15
@@ -170,7 +173,7 @@ Partial Class Form1
         '
         'BtnAgregarPlata
         '
-        Me.BtnAgregarPlata.Location = New System.Drawing.Point(595, 215)
+        Me.BtnAgregarPlata.Location = New System.Drawing.Point(579, 215)
         Me.BtnAgregarPlata.Name = "BtnAgregarPlata"
         Me.BtnAgregarPlata.Size = New System.Drawing.Size(75, 40)
         Me.BtnAgregarPlata.TabIndex = 16
@@ -179,16 +182,16 @@ Partial Class Form1
         '
         'BtnAgDesarrolladora
         '
-        Me.BtnAgDesarrolladora.Location = New System.Drawing.Point(579, 261)
+        Me.BtnAgDesarrolladora.Location = New System.Drawing.Point(565, 266)
         Me.BtnAgDesarrolladora.Name = "BtnAgDesarrolladora"
-        Me.BtnAgDesarrolladora.Size = New System.Drawing.Size(91, 60)
+        Me.BtnAgDesarrolladora.Size = New System.Drawing.Size(105, 60)
         Me.BtnAgDesarrolladora.TabIndex = 17
         Me.BtnAgDesarrolladora.Text = "Agregar Desarrolladora"
         Me.BtnAgDesarrolladora.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(694, 261)
+        Me.Button2.Location = New System.Drawing.Point(694, 266)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(91, 60)
         Me.Button2.TabIndex = 18
@@ -213,13 +216,43 @@ Partial Class Form1
         Me.Button4.Text = "Eliminar genero"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(814, 271)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(97, 50)
+        Me.Button7.TabIndex = 23
+        Me.Button7.Text = "Editar Desarrolladora"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(822, 215)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(89, 38)
+        Me.Button5.TabIndex = 24
+        Me.Button5.Text = "Editar plataforma"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(815, 170)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(89, 39)
+        Me.Button6.TabIndex = 25
+        Me.Button6.Text = "Editar genero"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AcceptButton = Me.BtnBuscar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
-        Me.ClientSize = New System.Drawing.Size(832, 516)
+        Me.ClientSize = New System.Drawing.Size(943, 516)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -267,4 +300,7 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class
