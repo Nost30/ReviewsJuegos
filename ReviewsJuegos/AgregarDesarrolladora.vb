@@ -19,4 +19,8 @@ Public Class AgregarDesarrolladora
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Close()
     End Sub
+
+    Private Sub TxtAgDesarrolladora_TextChanged(sender As Object, e As EventArgs) Handles TxtAgDesarrolladora.TextChanged
+
+    End Sub
 End Class

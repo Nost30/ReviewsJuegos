@@ -132,4 +132,16 @@ WHERE nombrejuego LIKE '%" & buscarTexto & "%'"
     Private Sub BtnAgDesarrolladora_Click(sender As Object, e As EventArgs) Handles BtnAgDesarrolladora.Click
         AgregarDesarrolladora.Show()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        EliminarDesarrolladora.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        EliminarPlataforma.Show()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        EliminarGenero.Show()
+    End Sub
 End Class

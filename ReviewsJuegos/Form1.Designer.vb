@@ -39,6 +39,9 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.BtnAgregarPlata = New System.Windows.Forms.Button()
         Me.BtnAgDesarrolladora = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -183,13 +186,43 @@ Partial Class Form1
         Me.BtnAgDesarrolladora.Text = "Agregar Desarrolladora"
         Me.BtnAgDesarrolladora.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(694, 261)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(91, 60)
+        Me.Button2.TabIndex = 18
+        Me.Button2.Text = "Eliminar desarrolladora"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(694, 215)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(91, 38)
+        Me.Button3.TabIndex = 19
+        Me.Button3.Text = "Eliminar plataforma"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(696, 170)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(89, 39)
+        Me.Button4.TabIndex = 20
+        Me.Button4.Text = "Eliminar genero"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AcceptButton = Me.BtnBuscar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
-        Me.ClientSize = New System.Drawing.Size(703, 516)
+        Me.ClientSize = New System.Drawing.Size(832, 516)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.BtnAgDesarrolladora)
         Me.Controls.Add(Me.BtnAgregarPlata)
         Me.Controls.Add(Me.Button1)
@@ -231,4 +264,7 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents BtnAgregarPlata As Button
     Friend WithEvents BtnAgDesarrolladora As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class
