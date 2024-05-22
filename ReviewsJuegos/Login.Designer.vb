@@ -1,94 +1,134 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Login
-    Inherits System.Windows.Forms.Form
+﻿Imports System
+Imports System.Diagnostics
+Imports System.Drawing
+Imports System.Windows.Forms
 
-    'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-        Try
-            If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
-            End If
-        Finally
-            MyBase.Dispose(disposing)
-        End Try
-    End Sub
+Namespace ReviewsJuegos
+    <CompilerServices.DesignerGenerated()>
 
-    'Requerido por el Diseñador de Windows Forms
-    Private components As System.ComponentModel.IContainer
+    ' Form reemplaza a Dispose para limpiar la lista de componentes.
+    Public Partial Class Login
+        Inherits Form
 
-    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
-    'Se puede modificar usando el Diseñador de Windows Forms.  
-    'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
-    Private Sub InitializeComponent()
-        Me.TxtUsuario = New System.Windows.Forms.TextBox()
-        Me.TxtContra = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.BtnLogin = New System.Windows.Forms.Button()
-        Me.SuspendLayout()
-        '
-        'TxtUsuario
-        '
-        Me.TxtUsuario.Location = New System.Drawing.Point(121, 74)
-        Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(100, 23)
-        Me.TxtUsuario.TabIndex = 1
-        '
-        'TxtContra
-        '
-        Me.TxtContra.Location = New System.Drawing.Point(121, 143)
-        Me.TxtContra.Name = "TxtContra"
-        Me.TxtContra.Size = New System.Drawing.Size(100, 23)
-        Me.TxtContra.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(124, 56)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 15)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Usuario"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(123, 116)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 15)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Contraseña"
-        '
-        'BtnLogin
-        '
-        Me.BtnLogin.Location = New System.Drawing.Point(124, 206)
-        Me.BtnLogin.Name = "BtnLogin"
-        Me.BtnLogin.Size = New System.Drawing.Size(75, 23)
-        Me.BtnLogin.TabIndex = 6
-        Me.BtnLogin.Text = "Login"
-        Me.BtnLogin.UseVisualStyleBackColor = True
-        '
-        'Login
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(317, 306)
-        Me.Controls.Add(Me.BtnLogin)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TxtContra)
-        Me.Controls.Add(Me.TxtUsuario)
-        Me.Name = "Login"
-        Me.Text = "Login"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+                ''' Cannot convert MethodDeclarationSyntax, System.ArgumentOutOfRangeException: Se produjo una excepción de tipo 'System.ArgumentOutOfRangeException'.
+''' Nombre del parámetro: node
+''' Valor actual not null.
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertToVariableDeclaratorOrNull(IsPatternExpressionSyntax node)
+'''    en System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+'''    en System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+'''    en System.Linq.Enumerable.<ConcatIterator>d__59`1.MoveNext()
+'''    en System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+'''    en System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertToDeclarationStatement(List`1 des, List`1 isPatternExpressions)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.InsertRequiredDeclarations(SyntaxList`1 convertedStatements, CSharpSyntaxNode originaNode)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertStatement(StatementSyntax statement, CSharpSyntaxVisitor`1 methodBodyVisitor)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.<>c__DisplayClass10_0.<ConvertStatements>b__0(StatementSyntax s)
+'''    en System.Linq.Enumerable.<SelectManyIterator>d__17`2.MoveNext()
+'''    en Microsoft.CodeAnalysis.SyntaxList`1.CreateNode(IEnumerable`1 nodes)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertStatements(SyntaxList`1 statements, MethodBodyExecutableStatementVisitor iteratorState)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertBody(BlockSyntax body, ArrowExpressionClauseSyntax expressionBody, Boolean hasReturnType, MethodBodyExecutableStatementVisitor iteratorState)
+'''    en ICSharpCode.CodeConverter.VB.NodesVisitor.VisitMethodDeclaration(MethodDeclarationSyntax node)
+'''    en Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
+'''    en ICSharpCode.CodeConverter.VB.CommentConvertingVisitorWrapper`1.Accept(SyntaxNode csNode, Boolean addSourceMapping)
+''' 
+''' Input:
+''' 
+'''         // Form reemplaza a Dispose para limpiar la lista de componentes.
+'''         [System.Diagnostics.@DebuggerNonUserCodeAttribute()]
+'''         protected override void Dispose(bool disposing)
+'''         {
+'''             try
+'''             {
+'''                 if (disposing && this.components is not null)
+'''                 {
+'''                     this.components.Dispose();
+'''                 }
+'''             }
+'''             finally
+'''             {
+'''                 base.Dispose(disposing);
+'''             }
+'''         }
+''' 
+''' 
 
-    End Sub
-    Friend WithEvents TxtUsuario As TextBox
-    Friend WithEvents TxtContra As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents BtnLogin As Button
-End Class
+        ' Requerido por el Diseñador de Windows Forms
+        Private components As System.ComponentModel.IContainer
+
+        ' NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
+        ' Se puede modificar usando el Diseñador de Windows Forms.  
+        ' No lo modifique con el editor de código.
+        <DebuggerStepThrough()>
+        Private Sub InitializeComponent()
+            TxtUsuario = New TextBox()
+            TxtContra = New TextBox()
+            Label2 = New Label()
+            Label3 = New Label()
+            BtnLogin = New Button()
+            AddHandler BtnLogin.Click, New EventHandler(AddressOf ButtonLogin_Click)
+            SuspendLayout()
+            ' 
+            ' TxtUsuario
+            ' 
+            TxtUsuario.Location = New Point(121, 74)
+            TxtUsuario.Name = "TxtUsuario"
+            TxtUsuario.Size = New Size(100, 23)
+            TxtUsuario.TabIndex = 1
+            ' 
+            ' TxtContra
+            ' 
+            TxtContra.Location = New Point(121, 143)
+            TxtContra.Name = "TxtContra"
+            TxtContra.Size = New Size(100, 23)
+            TxtContra.TabIndex = 2
+            ' 
+            ' Label2
+            ' 
+            Label2.AutoSize = True
+            Label2.Location = New Point(124, 56)
+            Label2.Name = "Label2"
+            Label2.Size = New Size(47, 15)
+            Label2.TabIndex = 4
+            Label2.Text = "Usuario"
+            ' 
+            ' Label3
+            ' 
+            Label3.AutoSize = True
+            Label3.Location = New Point(123, 116)
+            Label3.Name = "Label3"
+            Label3.Size = New Size(67, 15)
+            Label3.TabIndex = 5
+            Label3.Text = "Contraseña"
+            ' 
+            ' BtnLogin
+            ' 
+            BtnLogin.Location = New Point(124, 206)
+            BtnLogin.Name = "BtnLogin"
+            BtnLogin.Size = New Size(75, 23)
+            BtnLogin.TabIndex = 6
+            BtnLogin.Text = "Login"
+            BtnLogin.UseVisualStyleBackColor = True
+            ' 
+            ' Login
+            ' 
+            AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+            AutoScaleMode = AutoScaleMode.Font
+            ClientSize = New Size(317, 306)
+            Controls.Add(BtnLogin)
+            Controls.Add(Label3)
+            Controls.Add(Label2)
+            Controls.Add(TxtContra)
+            Controls.Add(TxtUsuario)
+            Name = "Login"
+            Text = "Login"
+            ResumeLayout(False)
+            PerformLayout()
+
+        End Sub
+        Friend TxtUsuario As TextBox
+        Friend TxtContra As TextBox
+        Friend Label2 As Label
+        Friend Label3 As Label
+        Friend BtnLogin As Button
+    End Class
+End Namespace

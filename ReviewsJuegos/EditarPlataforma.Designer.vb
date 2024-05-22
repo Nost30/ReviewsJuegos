@@ -1,108 +1,150 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class EditarPlataforma
-    Inherits System.Windows.Forms.Form
+﻿Imports System
+Imports System.Diagnostics
+Imports System.Drawing
+Imports System.Windows.Forms
 
-    'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-        Try
-            If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
-            End If
-        Finally
-            MyBase.Dispose(disposing)
-        End Try
-    End Sub
+Namespace ReviewsJuegos
+    <CompilerServices.DesignerGenerated()>
 
-    'Requerido por el Diseñador de Windows Forms
-    Private components As System.ComponentModel.IContainer
+    ' Form reemplaza a Dispose para limpiar la lista de componentes.
+    Public Partial Class EditarPlataforma
+        Inherits Form
 
-    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
-    'Se puede modificar usando el Diseñador de Windows Forms.  
-    'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
-    Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Cbxplataf = New System.Windows.Forms.ComboBox()
-        Me.TxtPlatafEdit = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(72, 34)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Selecciona una paltaforma"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(57, 137)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(136, 15)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "¿Como quieres llamarla?"
-        '
-        'Cbxplataf
-        '
-        Me.Cbxplataf.FormattingEnabled = True
-        Me.Cbxplataf.Location = New System.Drawing.Point(72, 70)
-        Me.Cbxplataf.Name = "Cbxplataf"
-        Me.Cbxplataf.Size = New System.Drawing.Size(121, 23)
-        Me.Cbxplataf.TabIndex = 2
-        '
-        'TxtPlatafEdit
-        '
-        Me.TxtPlatafEdit.Location = New System.Drawing.Point(80, 175)
-        Me.TxtPlatafEdit.Name = "TxtPlatafEdit"
-        Me.TxtPlatafEdit.Size = New System.Drawing.Size(100, 23)
-        Me.TxtPlatafEdit.TabIndex = 3
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(37, 218)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Editar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(155, 218)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Salir"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'EditarPlataforma
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(276, 290)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TxtPlatafEdit)
-        Me.Controls.Add(Me.Cbxplataf)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Name = "EditarPlataforma"
-        Me.Text = "EditarPlataforma"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+                ''' Cannot convert MethodDeclarationSyntax, System.ArgumentOutOfRangeException: Se produjo una excepción de tipo 'System.ArgumentOutOfRangeException'.
+''' Nombre del parámetro: node
+''' Valor actual not null.
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertToVariableDeclaratorOrNull(IsPatternExpressionSyntax node)
+'''    en System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+'''    en System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+'''    en System.Linq.Enumerable.<ConcatIterator>d__59`1.MoveNext()
+'''    en System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+'''    en System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertToDeclarationStatement(List`1 des, List`1 isPatternExpressions)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.InsertRequiredDeclarations(SyntaxList`1 convertedStatements, CSharpSyntaxNode originaNode)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertStatement(StatementSyntax statement, CSharpSyntaxVisitor`1 methodBodyVisitor)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.<>c__DisplayClass10_0.<ConvertStatements>b__0(StatementSyntax s)
+'''    en System.Linq.Enumerable.<SelectManyIterator>d__17`2.MoveNext()
+'''    en Microsoft.CodeAnalysis.SyntaxList`1.CreateNode(IEnumerable`1 nodes)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertStatements(SyntaxList`1 statements, MethodBodyExecutableStatementVisitor iteratorState)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertBody(BlockSyntax body, ArrowExpressionClauseSyntax expressionBody, Boolean hasReturnType, MethodBodyExecutableStatementVisitor iteratorState)
+'''    en ICSharpCode.CodeConverter.VB.NodesVisitor.VisitMethodDeclaration(MethodDeclarationSyntax node)
+'''    en Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
+'''    en ICSharpCode.CodeConverter.VB.CommentConvertingVisitorWrapper`1.Accept(SyntaxNode csNode, Boolean addSourceMapping)
+''' 
+''' Input:
+''' 
+'''         // Form reemplaza a Dispose para limpiar la lista de componentes.
+'''         [System.Diagnostics.@DebuggerNonUserCodeAttribute()]
+'''         protected override void Dispose(bool disposing)
+'''         {
+'''             try
+'''             {
+'''                 if (disposing && this.components is not null)
+'''                 {
+'''                     this.components.Dispose();
+'''                 }
+'''             }
+'''             finally
+'''             {
+'''                 base.Dispose(disposing);
+'''             }
+'''         }
+''' 
+''' 
 
-    End Sub
+        ' Requerido por el Diseñador de Windows Forms
+        Private components As System.ComponentModel.IContainer
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Cbxplataf As ComboBox
-    Friend WithEvents TxtPlatafEdit As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-End Class
+        ' NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
+        ' Se puede modificar usando el Diseñador de Windows Forms.  
+        ' No lo modifique con el editor de código.
+        <DebuggerStepThrough()>
+        Private Sub InitializeComponent()
+            Label1 = New Label()
+            Label2 = New Label()
+            Cbxplataf = New ComboBox()
+            TxtPlatafEdit = New TextBox()
+            Button1 = New Button()
+            AddHandler Button1.Click, New EventHandler(AddressOf Button1_Click)
+            Button2 = New Button()
+            AddHandler Button2.Click, New EventHandler(AddressOf Button2_Click)
+            SuspendLayout()
+            ' 
+            ' Label1
+            ' 
+            Label1.AutoSize = True
+            Label1.Location = New Point(72, 34)
+            Label1.Name = "Label1"
+            Label1.Size = New Size(147, 15)
+            Label1.TabIndex = 0
+            Label1.Text = "Selecciona una paltaforma"
+            ' 
+            ' Label2
+            ' 
+            Label2.AutoSize = True
+            Label2.Location = New Point(57, 137)
+            Label2.Name = "Label2"
+            Label2.Size = New Size(136, 15)
+            Label2.TabIndex = 1
+            Label2.Text = "¿Como quieres llamarla?"
+            ' 
+            ' Cbxplataf
+            ' 
+            Cbxplataf.FormattingEnabled = True
+            Cbxplataf.Location = New Point(72, 70)
+            Cbxplataf.Name = "Cbxplataf"
+            Cbxplataf.Size = New Size(121, 23)
+            Cbxplataf.TabIndex = 2
+            ' 
+            ' TxtPlatafEdit
+            ' 
+            TxtPlatafEdit.Location = New Point(80, 175)
+            TxtPlatafEdit.Name = "TxtPlatafEdit"
+            TxtPlatafEdit.Size = New Size(100, 23)
+            TxtPlatafEdit.TabIndex = 3
+            ' 
+            ' Button1
+            ' 
+            Button1.Location = New Point(37, 218)
+            Button1.Name = "Button1"
+            Button1.Size = New Size(75, 23)
+            Button1.TabIndex = 4
+            Button1.Text = "Editar"
+            Button1.UseVisualStyleBackColor = True
+            ' 
+            ' Button2
+            ' 
+            Button2.Location = New Point(155, 218)
+            Button2.Name = "Button2"
+            Button2.Size = New Size(75, 23)
+            Button2.TabIndex = 5
+            Button2.Text = "Salir"
+            Button2.UseVisualStyleBackColor = True
+            ' 
+            ' EditarPlataforma
+            ' 
+            AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+            AutoScaleMode = AutoScaleMode.Font
+            ClientSize = New Size(276, 290)
+            Controls.Add(Button2)
+            Controls.Add(Button1)
+            Controls.Add(TxtPlatafEdit)
+            Controls.Add(Cbxplataf)
+            Controls.Add(Label2)
+            Controls.Add(Label1)
+            Name = "EditarPlataforma"
+            Text = "EditarPlataforma"
+            AddHandler Load, New EventHandler(AddressOf EditarPlataforma_Load)
+            ResumeLayout(False)
+            PerformLayout()
+
+        End Sub
+
+        Friend Label1 As Label
+        Friend Label2 As Label
+        Friend Cbxplataf As ComboBox
+        Friend TxtPlatafEdit As TextBox
+        Friend Button1 As Button
+        Friend Button2 As Button
+    End Class
+End Namespace

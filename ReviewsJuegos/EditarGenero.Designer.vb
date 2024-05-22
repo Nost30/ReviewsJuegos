@@ -1,108 +1,150 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class EditarGenero
-    Inherits System.Windows.Forms.Form
+﻿Imports System
+Imports System.Diagnostics
+Imports System.Drawing
+Imports System.Windows.Forms
 
-    'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-        Try
-            If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
-            End If
-        Finally
-            MyBase.Dispose(disposing)
-        End Try
-    End Sub
+Namespace ReviewsJuegos
+    <CompilerServices.DesignerGenerated()>
 
-    'Requerido por el Diseñador de Windows Forms
-    Private components As System.ComponentModel.IContainer
+    ' Form reemplaza a Dispose para limpiar la lista de componentes.
+    Public Partial Class EditarGenero
+        Inherits Form
 
-    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
-    'Se puede modificar usando el Diseñador de Windows Forms.  
-    'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
-    Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.CbxGene = New System.Windows.Forms.ComboBox()
-        Me.TxtGenEdit = New System.Windows.Forms.TextBox()
-        Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(141, 44)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(167, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Selecciona el genero del juego"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(157, 133)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 15)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Lo llamaras..."
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(58, 234)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Editar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(230, 234)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Salir"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'CbxGene
-        '
-        Me.CbxGene.FormattingEnabled = True
-        Me.CbxGene.Location = New System.Drawing.Point(141, 77)
-        Me.CbxGene.Name = "CbxGene"
-        Me.CbxGene.Size = New System.Drawing.Size(121, 23)
-        Me.CbxGene.TabIndex = 4
-        '
-        'TxtGenEdit
-        '
-        Me.TxtGenEdit.Location = New System.Drawing.Point(141, 177)
-        Me.TxtGenEdit.Name = "TxtGenEdit"
-        Me.TxtGenEdit.Size = New System.Drawing.Size(100, 23)
-        Me.TxtGenEdit.TabIndex = 5
-        '
-        'EditarGenero
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(437, 292)
-        Me.Controls.Add(Me.TxtGenEdit)
-        Me.Controls.Add(Me.CbxGene)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Name = "EditarGenero"
-        Me.Text = "EditarGenero"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+                ''' Cannot convert MethodDeclarationSyntax, System.ArgumentOutOfRangeException: Se produjo una excepción de tipo 'System.ArgumentOutOfRangeException'.
+''' Nombre del parámetro: node
+''' Valor actual not null.
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertToVariableDeclaratorOrNull(IsPatternExpressionSyntax node)
+'''    en System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+'''    en System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+'''    en System.Linq.Enumerable.<ConcatIterator>d__59`1.MoveNext()
+'''    en System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+'''    en System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertToDeclarationStatement(List`1 des, List`1 isPatternExpressions)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.InsertRequiredDeclarations(SyntaxList`1 convertedStatements, CSharpSyntaxNode originaNode)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertStatement(StatementSyntax statement, CSharpSyntaxVisitor`1 methodBodyVisitor)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.<>c__DisplayClass10_0.<ConvertStatements>b__0(StatementSyntax s)
+'''    en System.Linq.Enumerable.<SelectManyIterator>d__17`2.MoveNext()
+'''    en Microsoft.CodeAnalysis.SyntaxList`1.CreateNode(IEnumerable`1 nodes)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertStatements(SyntaxList`1 statements, MethodBodyExecutableStatementVisitor iteratorState)
+'''    en ICSharpCode.CodeConverter.VB.CommonConversions.ConvertBody(BlockSyntax body, ArrowExpressionClauseSyntax expressionBody, Boolean hasReturnType, MethodBodyExecutableStatementVisitor iteratorState)
+'''    en ICSharpCode.CodeConverter.VB.NodesVisitor.VisitMethodDeclaration(MethodDeclarationSyntax node)
+'''    en Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
+'''    en ICSharpCode.CodeConverter.VB.CommentConvertingVisitorWrapper`1.Accept(SyntaxNode csNode, Boolean addSourceMapping)
+''' 
+''' Input:
+''' 
+'''         // Form reemplaza a Dispose para limpiar la lista de componentes.
+'''         [System.Diagnostics.@DebuggerNonUserCodeAttribute()]
+'''         protected override void Dispose(bool disposing)
+'''         {
+'''             try
+'''             {
+'''                 if (disposing && this.components is not null)
+'''                 {
+'''                     this.components.Dispose();
+'''                 }
+'''             }
+'''             finally
+'''             {
+'''                 base.Dispose(disposing);
+'''             }
+'''         }
+''' 
+''' 
 
-    End Sub
+        ' Requerido por el Diseñador de Windows Forms
+        Private components As System.ComponentModel.IContainer
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents CbxGene As ComboBox
-    Friend WithEvents TxtGenEdit As TextBox
-End Class
+        ' NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
+        ' Se puede modificar usando el Diseñador de Windows Forms.  
+        ' No lo modifique con el editor de código.
+        <DebuggerStepThrough()>
+        Private Sub InitializeComponent()
+            Label1 = New Label()
+            Label2 = New Label()
+            Button1 = New Button()
+            AddHandler Button1.Click, New EventHandler(AddressOf Button1_Click)
+            Button2 = New Button()
+            AddHandler Button2.Click, New EventHandler(AddressOf Button2_Click)
+            CbxGene = New ComboBox()
+            TxtGenEdit = New TextBox()
+            SuspendLayout()
+            ' 
+            ' Label1
+            ' 
+            Label1.AutoSize = True
+            Label1.Location = New Point(141, 44)
+            Label1.Name = "Label1"
+            Label1.Size = New Size(167, 15)
+            Label1.TabIndex = 0
+            Label1.Text = "Selecciona el genero del juego"
+            ' 
+            ' Label2
+            ' 
+            Label2.AutoSize = True
+            Label2.Location = New Point(157, 133)
+            Label2.Name = "Label2"
+            Label2.Size = New Size(76, 15)
+            Label2.TabIndex = 1
+            Label2.Text = "Lo llamaras..."
+            ' 
+            ' Button1
+            ' 
+            Button1.Location = New Point(58, 234)
+            Button1.Name = "Button1"
+            Button1.Size = New Size(75, 23)
+            Button1.TabIndex = 2
+            Button1.Text = "Editar"
+            Button1.UseVisualStyleBackColor = True
+            ' 
+            ' Button2
+            ' 
+            Button2.Location = New Point(230, 234)
+            Button2.Name = "Button2"
+            Button2.Size = New Size(75, 23)
+            Button2.TabIndex = 3
+            Button2.Text = "Salir"
+            Button2.UseVisualStyleBackColor = True
+            ' 
+            ' CbxGene
+            ' 
+            CbxGene.FormattingEnabled = True
+            CbxGene.Location = New Point(141, 77)
+            CbxGene.Name = "CbxGene"
+            CbxGene.Size = New Size(121, 23)
+            CbxGene.TabIndex = 4
+            ' 
+            ' TxtGenEdit
+            ' 
+            TxtGenEdit.Location = New Point(141, 177)
+            TxtGenEdit.Name = "TxtGenEdit"
+            TxtGenEdit.Size = New Size(100, 23)
+            TxtGenEdit.TabIndex = 5
+            ' 
+            ' EditarGenero
+            ' 
+            AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+            AutoScaleMode = AutoScaleMode.Font
+            ClientSize = New Size(437, 292)
+            Controls.Add(TxtGenEdit)
+            Controls.Add(CbxGene)
+            Controls.Add(Button2)
+            Controls.Add(Button1)
+            Controls.Add(Label2)
+            Controls.Add(Label1)
+            Name = "EditarGenero"
+            Text = "EditarGenero"
+            AddHandler Load, New EventHandler(AddressOf EditarGenero_Load)
+            ResumeLayout(False)
+            PerformLayout()
+
+        End Sub
+
+        Friend Label1 As Label
+        Friend Label2 As Label
+        Friend Button1 As Button
+        Friend Button2 As Button
+        Friend CbxGene As ComboBox
+        Friend TxtGenEdit As TextBox
+    End Class
+End Namespace

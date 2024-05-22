@@ -1,60 +1,70 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System
+Imports System.Data
+Imports System.Data.SqlClient
+Imports System.Windows.Forms
+Imports Microsoft.VisualBasic.CompilerServices
 
-Public Class EditarPlataforma
+Namespace ReviewsJuegos
 
-    Private Sub EditarPlataforma_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CargarPlataformas()
+    Public Partial Class EditarPlataforma
+        Public Sub New()
+            InitializeComponent()
+        End Sub
 
-    End Sub
+        Private Sub EditarPlataforma_Load(sender As Object, e As EventArgs)
+            CargarPlataformas()
 
-    Private Sub CargarPlataformas()
-        Dim connectionString As String = "Data Source=localhost;Initial Catalog=ReviewJuego;Integrated Security=True"
-        Dim query As String = "SELECT Id, NombrePlataforma FROM Plataforma"
+        End Sub
 
-        Using connection As New SqlConnection(connectionString)
-            Dim command As New SqlCommand(query, connection)
-            Dim adapter As New SqlDataAdapter(command)
-            Dim table As New DataTable()
+        Private Sub CargarPlataformas()
+            Dim connectionString = "Data Source=localhost;Initial Catalog=ReviewJuego;Integrated Security=True"
+            Dim query = "SELECT Id, NombrePlataforma FROM Plataforma"
 
-            adapter.Fill(table)
+            Using connection = New SqlConnection(connectionString)
+                Dim command = New SqlCommand(query, connection)
+                Dim adapter = New SqlDataAdapter(command)
+                Dim table = New DataTable()
 
-            Cbxplataf.DisplayMember = "NombrePlataforma"
-            Cbxplataf.ValueMember = "Id"
-            Cbxplataf.DataSource = table
-        End Using
-    End Sub
+                adapter.Fill(table)
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Close()
-    End Sub
+                Cbxplataf.DisplayMember = "NombrePlataforma"
+                Cbxplataf.ValueMember = "Id"
+                Cbxplataf.DataSource = table
+            End Using
+        End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If Cbxplataf.SelectedIndex <> -1 And Not String.IsNullOrEmpty(TxtPlatafEdit.Text) Then
-            Dim idPlataforma As Integer = CInt(Cbxplataf.SelectedValue)
-            Dim nuevoNombre As String = TxtPlatafEdit.Text
+        Private Sub Button2_Click(sender As Object, e As EventArgs)
+            Close()
+        End Sub
 
-            ActualizarNombrePlataforma(idPlataforma, nuevoNombre)
-        Else
-            MessageBox.Show("Seleccione una plataforma y escriba el nuevo nombre.")
-        End If
-    End Sub
+        Private Sub Button1_Click(sender As Object, e As EventArgs)
+            If Cbxplataf.SelectedIndex <> -1 And Not String.IsNullOrEmpty(TxtPlatafEdit.Text) Then
+                Dim idPlataforma = Conversions.ToInteger(Cbxplataf.SelectedValue)
+                Dim nuevoNombre = TxtPlatafEdit.Text
 
-    Private Sub ActualizarNombrePlataforma(idPlataforma As Integer, nuevoNombre As String)
-        Dim connectionString As String = "Data Source=localhost;Initial Catalog=ReviewJuego;Integrated Security=True"
-        Dim query As String = "SP_ActualizarPlataforma"
+                ActualizarNombrePlataforma(idPlataforma, nuevoNombre)
+            Else
+                MessageBox.Show("Seleccione una plataforma y escriba el nuevo nombre.")
+            End If
+        End Sub
 
-        Using connection As New SqlConnection(connectionString)
-            Dim command As New SqlCommand(query, connection)
-            command.CommandType = CommandType.StoredProcedure
-            command.Parameters.AddWithValue("@IdPlataforma", idPlataforma)
-            command.Parameters.AddWithValue("@NombrePlataforma", nuevoNombre)
+        Private Sub ActualizarNombrePlataforma(idPlataforma As Integer, nuevoNombre As String)
+            Dim connectionString = "Data Source=localhost;Initial Catalog=ReviewJuego;Integrated Security=True"
+            Dim query = "SP_ActualizarPlataforma"
 
-            connection.Open()
-            command.ExecuteNonQuery()
-            connection.Close()
+            Using connection = New SqlConnection(connectionString)
+                Dim command = New SqlCommand(query, connection)
+                command.CommandType = CommandType.StoredProcedure
+                command.Parameters.AddWithValue("@IdPlataforma", idPlataforma)
+                command.Parameters.AddWithValue("@NombrePlataforma", nuevoNombre)
 
-            MessageBox.Show("Nombre de la Plataforma actualizado correctamente.")
-            CargarPlataformas() ' Recargar la lista de desarrolladoras
-        End Using
-    End Sub
-End Class
+                connection.Open()
+                command.ExecuteNonQuery()
+                connection.Close()
+
+                MessageBox.Show("Nombre de la Plataforma actualizado correctamente.")
+                CargarPlataformas() ' Recargar la lista de desarrolladoras
+            End Using
+        End Sub
+    End Class
+End Namespace

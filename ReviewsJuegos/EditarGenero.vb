@@ -1,59 +1,69 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System
+Imports System.Data
+Imports System.Data.SqlClient
+Imports System.Windows.Forms
+Imports Microsoft.VisualBasic.CompilerServices
 
-Public Class EditarGenero
+Namespace ReviewsJuegos
 
-    Private Sub EditarGenero_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CargarGeneros()
-    End Sub
+    Public Partial Class EditarGenero
+        Public Sub New()
+            InitializeComponent()
+        End Sub
 
-    Private Sub CargarGeneros()
-        Dim connectionString As String = "Data Source=localhost;Initial Catalog=ReviewJuego;Integrated Security=True"
-        Dim query As String = "SELECT Id, Genero FROM Genero"
+        Private Sub EditarGenero_Load(sender As Object, e As EventArgs)
+            CargarGeneros()
+        End Sub
 
-        Using connection As New SqlConnection(connectionString)
-            Dim command As New SqlCommand(query, connection)
-            Dim adapter As New SqlDataAdapter(command)
-            Dim table As New DataTable()
+        Private Sub CargarGeneros()
+            Dim connectionString = "Data Source=localhost;Initial Catalog=ReviewJuego;Integrated Security=True"
+            Dim query = "SELECT Id, Genero FROM Genero"
 
-            adapter.Fill(table)
+            Using connection = New SqlConnection(connectionString)
+                Dim command = New SqlCommand(query, connection)
+                Dim adapter = New SqlDataAdapter(command)
+                Dim table = New DataTable()
 
-            CbxGene.DisplayMember = "Genero"
-            CbxGene.ValueMember = "Id"
-            CbxGene.DataSource = table
-        End Using
-    End Sub
+                adapter.Fill(table)
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Close()
-    End Sub
+                CbxGene.DisplayMember = "Genero"
+                CbxGene.ValueMember = "Id"
+                CbxGene.DataSource = table
+            End Using
+        End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If CbxGene.SelectedIndex <> -1 And Not String.IsNullOrEmpty(TxtGenEdit.Text) Then
-            Dim idGenero As Integer = CInt(CbxGene.SelectedValue)
-            Dim nuevoNombre As String = TxtGenEdit.Text
+        Private Sub Button2_Click(sender As Object, e As EventArgs)
+            Close()
+        End Sub
 
-            ActualizarNombreGenero(idGenero, nuevoNombre)
-        Else
-            MessageBox.Show("Seleccione un género y escriba el nuevo nombre.")
-        End If
-    End Sub
+        Private Sub Button1_Click(sender As Object, e As EventArgs)
+            If CbxGene.SelectedIndex <> -1 And Not String.IsNullOrEmpty(TxtGenEdit.Text) Then
+                Dim idGenero = Conversions.ToInteger(CbxGene.SelectedValue)
+                Dim nuevoNombre = TxtGenEdit.Text
 
-    Private Sub ActualizarNombreGenero(idGenero As Integer, nuevoNombre As String)
-        Dim connectionString As String = "Data Source=localhost;Initial Catalog=ReviewJuego;Integrated Security=True"
-        Dim query As String = "SP_ActualizarGenero"
+                ActualizarNombreGenero(idGenero, nuevoNombre)
+            Else
+                MessageBox.Show("Seleccione un género y escriba el nuevo nombre.")
+            End If
+        End Sub
 
-        Using connection As New SqlConnection(connectionString)
-            Dim command As New SqlCommand(query, connection)
-            command.CommandType = CommandType.StoredProcedure
-            command.Parameters.AddWithValue("@IdGenero", idGenero)
-            command.Parameters.AddWithValue("@NombreGenero", nuevoNombre)
+        Private Sub ActualizarNombreGenero(idGenero As Integer, nuevoNombre As String)
+            Dim connectionString = "Data Source=localhost;Initial Catalog=ReviewJuego;Integrated Security=True"
+            Dim query = "SP_ActualizarGenero"
 
-            connection.Open()
-            command.ExecuteNonQuery()
-            connection.Close()
+            Using connection = New SqlConnection(connectionString)
+                Dim command = New SqlCommand(query, connection)
+                command.CommandType = CommandType.StoredProcedure
+                command.Parameters.AddWithValue("@IdGenero", idGenero)
+                command.Parameters.AddWithValue("@NombreGenero", nuevoNombre)
 
-            MessageBox.Show("Nombre del género actualizado correctamente.")
-            CargarGeneros() ' Recargar la lista de géneros
-        End Using
-    End Sub
-End Class
+                connection.Open()
+                command.ExecuteNonQuery()
+                connection.Close()
+
+                MessageBox.Show("Nombre del género actualizado correctamente.")
+                CargarGeneros() ' Recargar la lista de géneros
+            End Using
+        End Sub
+    End Class
+End Namespace
